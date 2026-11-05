@@ -5,6 +5,7 @@ A small, update-friendly NvChad configuration for the Nusa Mokka workstation.
 ## Included
 
 - NvChad UI and defaults, loaded directly from the upstream `NvChad/NvChad` plugin.
+- NvChad's Telescope search, file explorer, completion, snippets, git signs, and which-key defaults.
 - Transparent editor background for Konsole's Nusa Obsidian theme.
 - C and C++ through `clangd`.
 - Go through `gopls`.
@@ -34,7 +35,7 @@ Mason installs `clangd` and `gopls` from the configured LSP servers. Install the
 - Go: `gopls` and `gofmt` (included with Go)
 - Odin: build [OLS](https://github.com/DanielGavin/ols) from source with `./build.sh` and `./odinfmt.sh`; keep `ols`, `odinfmt`, and the OLS `builtin` directory together or set `OLS_BUILTIN_FOLDER`
 
-Make sure those executables are on `PATH`.
+Make sure those executables are on `PATH`. On FreeBSD, install your Odin toolchain first, then build OLS from its source repository using the included scripts. OLS tracks Odin master, so keep it reasonably aligned with your compiler version.
 
 ## Updating
 
