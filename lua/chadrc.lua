@@ -6,4 +6,8 @@ M.base46 = {
   transparency = true,
 }
 
+M.mason = {
+  pkgs = { "clangd", "gopls" },
+}
+
 return M
