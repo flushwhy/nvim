@@ -1,4 +1,11 @@
 return {
+  formatters = {
+    odinfmt = {
+      command = "odinfmt",
+      args = { "-stdin" },
+      stdin = true,
+    },
+  },
   formatters_by_ft = {
     c = { "clang_format" },
     cpp = { "clang_format" },
