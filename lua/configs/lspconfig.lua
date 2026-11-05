@@ -1,4 +1,11 @@
 require("nvchad.configs.lspconfig").defaults()
 
--- nvim-lspconfig supplies the server definitions for all three languages.
-vim.lsp.enable({ "clangd", "gopls", "ols" })
+vim.lsp.enable({
+  "clangd",
+  "gopls",
+  "ols",
+  "pyright",
+  "rust_analyzer",
+  "html",
+  "cssls",
+})
