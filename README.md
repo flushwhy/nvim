@@ -32,7 +32,7 @@ Mason installs `clangd` and `gopls` from the configured LSP servers. Install the
 
 - C/C++: `clangd` and `clang-format`
 - Go: `gopls` and `gofmt` (included with Go)
-- Odin: `ols` and `odinfmt` (from the Odin toolchain)
+- Odin: build [OLS](https://github.com/DanielGavin/ols) from source with `./build.sh` and `./odinfmt.sh`; keep `ols`, `odinfmt`, and the OLS `builtin` directory together or set `OLS_BUILTIN_FOLDER`
 
 Make sure those executables are on `PATH`.
 
