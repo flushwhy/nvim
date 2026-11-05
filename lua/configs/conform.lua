@@ -12,6 +12,9 @@ return {
     go = { "gofmt" },
     odin = { "odinfmt" },
     lua = { "stylua" },
+    python = { "ruff_format" },
+    css = { "prettier" },
+    html = { "prettier" },
   },
   format_on_save = {
     timeout_ms = 1000,
