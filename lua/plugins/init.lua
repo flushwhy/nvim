@@ -15,6 +15,19 @@ return {
     config = function() require "configs.lspconfig" end,
   },
   {
+    "scalameta/nvim-metals",
+    ft = { "scala", "sbt" },
+    opts = function() return require("metals").bare_config() end,
+    config = function(self, metals_config)
+      local group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = self.ft,
+        group = group,
+        callback = function() require("metals").initialize_or_attach(metals_config) end,
+      })
+    end,
+  },
+  {
     "hrsh7th/nvim-cmp",
     opts = require "configs.cmp",
   },
@@ -68,7 +81,7 @@ return {
     opts = {
       ensure_installed = {
         "bash", "c", "cpp", "go", "odin", "lua", "vim", "vimdoc",
-        "json", "yaml", "toml", "python", "rust", "html", "css",
+        "json", "yaml", "toml", "python", "rust", "html", "css", "scala",
       },
     },
   },
