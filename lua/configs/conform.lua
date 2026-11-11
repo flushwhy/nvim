@@ -11,6 +11,7 @@ return {
     cpp = { "clang_format" },
     go = { "gofmt" },
     odin = { "odinfmt" },
+    scala = { "scalafmt" },
     lua = { "stylua" },
     python = { "ruff_format" },
     css = { "prettier" },
