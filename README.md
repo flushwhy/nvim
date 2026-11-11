@@ -12,9 +12,10 @@ A personal, update-friendly NvChad configuration. NvChad stays upstream; this re
 - Telescope, NvimTree, Git signs, which-key, and the rest of NvChad's standard tools.
 - Discord Rich Presence and Xmake project integration.
 - C and C++ through `clangd`; Go through `gopls`; Odin through `ols`.
+- Scala and sbt through Metals, including Chisel hardware projects.
 - Optional Python, Rust, HTML, and CSS language servers.
-- Tree-sitter parsers for C, C++, Go, Odin, Lua, shell, JSON, YAML, TOML, Python, Rust, HTML, and CSS.
-- Format-on-save for C/C++, Go, Odin, Lua, Python, CSS, and HTML.
+- Tree-sitter parsers for C, C++, Go, Odin, Scala, Lua, shell, JSON, YAML, TOML, Python, Rust, HTML, and CSS.
+- Format-on-save for C/C++, Go, Odin, Scala, Lua, Python, CSS, and HTML.
 - Transparent background designed to work with terminal transparency.
 
 The dashboard and general UI use neutral editor branding. Odin remains supported as a language, but there is no Odin-themed logo, dashboard slogan, or Odin news feed.
@@ -35,14 +36,17 @@ On first launch, let Lazy install plugins. Then run:
 :TSUpdate
 ```
 
-Mason installs the configured C/C++, Go, Python, and Rust language servers. Install formatters and Odin tooling separately and ensure they are on `PATH`:
+Mason installs the configured C/C++, Go, Python, and Rust language servers. Install formatters and other language tooling separately and ensure they are on `PATH`:
 
 - C/C++: `clangd` and `clang-format`
 - Go: `gopls` and `gofmt` (included with Go)
 - Odin: `ols` and `odinfmt` from the Odin toolchain
+- Scala/Chisel: Java 17, [Coursier](https://get-coursier.io/docs/cli-installation), [sbt](https://www.scala-sbt.org/download.html), and [Scalafmt](https://scalameta.org/scalafmt/)
 - Python: `pyright` and `ruff`
 - Rust: `rust-analyzer` and `rustfmt`
 - CSS/HTML: `prettier`
+
+Metals is installed and managed by `nvim-metals` through Coursier; it is not a Mason package in this configuration. Open a Scala source file or `build.sbt` inside an sbt project and Metals will prompt to install and import the build. Chisel sources use the same Scala language support.
 
 For Odin, build [OLS](https://github.com/DanielGavin/ols) using its provided build scripts and keep it aligned with your Odin compiler version.
 
