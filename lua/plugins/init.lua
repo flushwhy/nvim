@@ -29,7 +29,7 @@ return {
   },
   {
     "hrsh7th/nvim-cmp",
-    opts = require "configs.cmp",
+    opts = function() return require "configs.cmp" end,
   },
   {
     "flushwhy/customrss.nvim",
