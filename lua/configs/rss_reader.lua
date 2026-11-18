@@ -123,7 +123,7 @@ function M.open()
     local feed = string.format("%-7s", (entry.feed_name or "?"):sub(1, 7))
     local title_width = math.max(8, list_width - 19)
     local title = (entry.title or "(no title)"):gsub("[%c]", " "):sub(1, title_width)
-    return string.format("%s%s  %- " .. title_width .. "s  %s", unread, feed, title, age_label(entry.published))
+    return string.format("%s%s  %-" .. title_width .. "s  %s", unread, feed, title, age_label(entry.published))
   end
 
   local function render_list()
