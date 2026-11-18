@@ -5,20 +5,24 @@ A personal, update-friendly NvChad configuration. NvChad stays upstream; this re
 ## Included
 
 - NvChad UI and defaults, loaded as an upstream Lazy.nvim plugin.
-- Doomchad theme with transparency enabled.
-- Clean Alpha dashboard with file search, recent files, grep, file browser, and latest technology updates.
-- Floating RSS reader with refresh and open-in-browser actions.
+- Doomchad theme with transparency enabled and tuned syntax highlighting.
+- Clean, neutral Alpha dashboard with file search, recent files, grep, file browser, and latest technology updates.
+- Floating two-pane RSS reader with article previews, refresh, and open-in-browser actions.
 - Tuned completion menu with ghost text, bordered documentation, snippet navigation, and useful source labels.
+- Rainbow indentation guides, scope highlighting, cursor-word highlighting, smooth cursor/scroll animations, and jump indication.
+- Inline color previews for CSS, HTML, and Tailwind colors.
 - Telescope, NvimTree, Git signs, which-key, and the rest of NvChad's standard tools.
 - Discord Rich Presence and Xmake project integration.
 - C and C++ through `clangd`; Go through `gopls`; Odin through `ols`.
+- OCaml through `ocamllsp`, including the dedicated Windows opam switch configuration.
+- ReScript through `rescript-language-server`, with a Windows-safe Node launch command.
 - Scala and sbt through Metals, including Chisel hardware projects.
 - Optional Python, Rust, HTML, and CSS language servers.
-- Tree-sitter parsers for C, C++, Go, Odin, Scala, Lua, shell, JSON, YAML, TOML, Python, Rust, HTML, and CSS.
+- Tree-sitter parsers for C, C++, Go, Odin, Scala, OCaml, ReScript, Lua, shell, JSON, YAML, TOML, Python, Rust, HTML, CSS, JavaScript, and TypeScript.
 - Format-on-save for C/C++, Go, Odin, Scala, Lua, Python, CSS, and HTML.
 - Transparent background designed to work with terminal transparency.
 
-The dashboard and general UI use neutral editor branding. Odin remains supported as a language, but there is no Odin-themed logo, dashboard slogan, or Odin news feed.
+The dashboard uses neutral editor branding. Odin remains available as a language toolchain, without an Odin-themed logo, slogan, or news feed.
 
 ## Install
 
@@ -36,11 +40,13 @@ On first launch, let Lazy install plugins. Then run:
 :TSUpdate
 ```
 
-Mason installs the configured C/C++, Go, Python, and Rust language servers. Install formatters and other language tooling separately and ensure they are on `PATH`:
+Mason installs the configured C/C++, Go, Python, Rust, and ReScript language servers. Install formatters and other language tooling separately and ensure they are on `PATH`:
 
 - C/C++: `clangd` and `clang-format`
 - Go: `gopls` and `gofmt` (included with Go)
 - Odin: `ols` and `odinfmt` from the Odin toolchain
+- OCaml: `ocamllsp` through opam; Windows uses the `ocaml-lsp-tooling` switch
+- ReScript: `rescript-language-server` and Node.js
 - Scala/Chisel: Java 17, [Coursier](https://get-coursier.io/docs/cli-installation), [sbt](https://www.scala-sbt.org/download.html), and [Scalafmt](https://scalameta.org/scalafmt/)
 - Python: `pyright` and `ruff`
 - Rust: `rust-analyzer` and `rustfmt`
